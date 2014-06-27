@@ -1,0 +1,58 @@
+<script>
+
+function deck() {
+	this.card = [52]
+	this.count = function() {
+		return this.card.lenght
+	}
+	this.init = function () {
+		for (r = 1; r <= 52; r++) {
+			// start loop of ranks, r
+		this.cards.push(new card(r))
+				}
+			}
+		}
+		
+	function card(rank) {
+		this.rank = rank;
+		this.show = function() {
+			console.log(this.rank + " of ")
+		}
+	}
+	
+	d = new deck()
+	d.init
+	
+	
+var player1, player2, round;
+
+function player(name, init) {
+	this.name = name;
+	this.init = function () {
+		for (r = 1; r <= 52; r++) {
+		this.cards.push(new card(r))
+		}
+		}
+	this.position = 0;
+	this.run = function() {
+		if (this.init) {
+			this.position = this.position + this.init;
+	}
+	}
+	}
+	
+	player1 = new player("Player 1", this.init);
+	player2 = new player("Player 2", this.init);
+
+round = 5;
+
+while (player1.position < round && player2.position < round) {
+	player1.run();
+	player2.run();
+		console.log(player1.name + ": " + player1.position + ", " +
+					player2.name + ": " + player2.position)
+		}
+	
+
+
+</script>
